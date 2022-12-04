@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/input_field_icon_size"
+    android:height="@dimen/input_field_icon_size"
+    android:viewportWidth="18"
+    android:viewportHeight="18">
+  <path
+      android:pathData="M15.938,6.863C15.57,6.278 15.15,5.753 14.715,5.28L11.887,8.108C11.977,8.385 12.03,8.685 12.03,9C12.03,10.68 10.672,12.03 9,12.03C8.685,12.03 8.385,11.977 8.107,11.887L5.512,14.483C6.607,15.097 7.792,15.42 9,15.42C10.335,15.42 11.632,15.03 12.818,14.302C14.002,13.568 15.068,12.495 15.938,11.13C16.688,9.96 16.688,8.04 15.938,6.863Z"
+      android:strokeAlpha="0.4"
+      android:fillColor="@color/component_input_foreground"
+      android:fillAlpha="0.4"/>
+  <path
+      android:pathData="M10.515,7.485L7.485,10.515C7.102,10.125 6.855,9.585 6.855,9C6.855,7.822 7.815,6.855 9,6.855C9.585,6.855 10.125,7.102 10.515,7.485Z"
+      android:fillColor="@color/component_input_foreground"/>
+  <path
+      android:pathData="M13.688,4.313L11.145,6.855C10.597,6.3 9.84,5.97 9,5.97C7.32,5.97 5.97,7.328 5.97,9C5.97,9.84 6.307,10.597 6.855,11.145L4.32,13.688H4.313C3.48,13.012 2.715,12.15 2.063,11.13C1.313,9.953 1.313,8.04 2.063,6.863C2.932,5.498 3.997,4.425 5.182,3.69C6.367,2.97 7.665,2.573 9,2.573C10.672,2.573 12.292,3.188 13.688,4.313Z"
+      android:strokeAlpha="0.4"
+      android:fillColor="@color/component_input_foreground"
+      android:fillAlpha="0.4"/>
+  <path
+      android:pathData="M11.145,9C11.145,10.178 10.185,11.145 9,11.145C8.955,11.145 8.918,11.145 8.873,11.13L11.13,8.873C11.145,8.918 11.145,8.955 11.145,9Z"
+      android:fillColor="@color/component_input_foreground"/>
+  <path
+      android:pathData="M16.327,1.672C16.102,1.447 15.735,1.447 15.51,1.672L1.672,15.517C1.447,15.742 1.447,16.11 1.672,16.335C1.785,16.44 1.927,16.5 2.077,16.5C2.227,16.5 2.37,16.44 2.482,16.327L16.327,2.482C16.56,2.257 16.56,1.897 16.327,1.672Z"
+      android:fillColor="@color/component_input_foreground"/>
+</vector>
