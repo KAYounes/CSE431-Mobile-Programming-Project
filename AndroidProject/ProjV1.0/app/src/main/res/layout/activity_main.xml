@@ -4,13 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#DEEDE3">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frag_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.projv10.AppBar"
+        tools:layout="@layout/fragment_app_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/frag_splash_screen"/>
 
 <androidx.fragment.app.FragmentContainerView
     android:id="@+id/frag_splash_screen"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="0dp"
     android:name="com.example.projv10.SplashScreen"
-    tools:layout="@layout/fragment_splash_screen"/>
+    tools:layout="@layout/fragment_splash_screen"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/frag_app_bar"
+    android:visibility="invisible"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
