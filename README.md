@@ -1,7 +1,7 @@
 # Project Documentation
 
 ## What is this?
-This is the course project for the course CSE431 Mobile programming course.
+This is the course project for the CSE431 Mobile programming course.
 
 ## What to expect?
 A running android application that provides food delivery services.
