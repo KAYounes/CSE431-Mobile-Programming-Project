@@ -2,4 +2,12 @@
     <string name="app_name">ProjV1.0</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logo">AKLNY</string>
+    <string name="form_dummy_validation_message">Oops, this is validation!</string>
+    <string name="input_username_label">Username</string>
+    <string name="input_username_hint">XP1234@asu.eng.edu.eg</string>
+    <string name="input_password_label">Password</string>
+    <string name="input_password_hint">password</string>
+    <string name="button_login">Login</string>
+    <string name="button_recover_password">Recover Password</string>
+    <string name="button_new_account">Create a New Account</string>
 </resources>

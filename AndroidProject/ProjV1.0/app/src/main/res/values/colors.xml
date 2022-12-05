@@ -7,16 +7,19 @@
 <!--    <color name="teal_700">#FF018786</color>-->
     <color name="palette_primary"> #1B3022 </color>
     <color name="palette_secondary"> #FF1971 </color>
-    <color name="component_input_background"> #213B2A </color>
-    <color name="component_input_foreground"> #5CA374 </color>
-    <color name="component_input_border"> #31583F </color>
-    <color name="component_input_icon_bg"> #2C4E38 </color>
-    <color name="component_input_heading"> #407251 </color>
-    <color name="component_input_placeholder"> #30553D </color>
-    <color name="component_input_error_msg"> #FF0044 </color>
+
+    <color name="component_input_background"> #D4E8DB </color>
+    <color name="component_input_foreground"> #47855D </color>
+    <color name="component_input_border"> #B6D8C2 </color>
+    <color name="component_input_icon_bg"> #C3DFCD </color>
+    <color name="component_input_label"> #407251 </color>
+    <color name="component_input_placeholder"> #9BCAAC </color>
+    <color name="component_input_validation"> #FF0044 </color>
+
     <color name="component_button_alternative_bg"> #44222F </color>
     <color name="component_button_background"> #FF1971 </color>
     <color name="component_button_foreground"> #E4FDE1 </color>
+
     <color name="screens_login_background"> #1B3022 </color>
 
     <color name="black">#FF000000</color>
