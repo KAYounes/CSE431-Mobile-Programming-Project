@@ -20,8 +20,9 @@
     <color name="component_button_background"> #FF1971 </color>
     <color name="component_button_foreground"> #E4FDE1 </color>
 
-    <color name="screens_login_background"> #1B3022 </color>
+    <color name="screens_login_bg_light"> #DEEDE3 </color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="screens_splash_screen_bg">#1B3022</color>
 </resources>

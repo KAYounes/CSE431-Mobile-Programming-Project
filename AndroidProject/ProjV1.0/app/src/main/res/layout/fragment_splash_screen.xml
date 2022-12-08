@@ -10,7 +10,7 @@
         android:id="@+id/contain_logo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/screens_login_background">
+        android:background="@color/screens_splash_screen_bg">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
