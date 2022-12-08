@@ -22,5 +22,7 @@
     <dimen name="button_horizontal_padding">18dp</dimen>
     <dimen name="button_submit_text_size">18sp</dimen>
     <dimen name="button_medium_text_size">12sp</dimen>
+    <dimen name="screen_title_text_size">32sp</dimen>
+    <dimen name="radius_50dp">50dp</dimen>
 
 </resources>

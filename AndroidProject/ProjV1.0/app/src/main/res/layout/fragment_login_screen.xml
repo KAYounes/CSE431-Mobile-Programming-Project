@@ -6,198 +6,256 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".LoginScreen">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/contain_login_screen"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DEEDE3">
+        android:orientation="vertical"
+        android:background="@color/palette_primary">
 
-<!-- Login Form -->
-        <LinearLayout
-            android:layout_marginTop="40dp"
-            android:id="@+id/contain_form"
+        <!-- Login Screen Top Part -->
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="0dp"
+            android:layout_weight="0.2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_btn"
+                android:backgroundTint="@color/component_button_alternative_bg"
+                android:fontFamily="@font/shrikhand_regular"
+                android:gravity="center"
+                android:elevation="@dimen/button_elevation"
+                android:paddingVertical="@dimen/button_vertical_padding"
+                android:text="@string/button_login"
+                android:textColor="@color/palette_secondary"
+                android:textSize="@dimen/screen_title_text_size"
+                android:paddingHorizontal="@dimen/button_horizontal_padding"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!-- Username Group-->
+        <!-- Login Screen Bottom Part -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contain_login_screen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="@drawable/rectangle_round_top_50dp"
+            android:backgroundTint="@color/screens_login_bg_light"
+            android:elevation="-50dp">
+            <!-- Login Form -->
             <LinearLayout
-                android:id="@+id/contain_username_group"
+                android:layout_marginTop="40dp"
+                android:id="@+id/contain_form"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:showDividers="middle"
-                android:divider="@drawable/divider_input_group"
-                android:layout_marginBottom="@dimen/login_form_gap">
-                <TextView
-                    android:id="@+id/tv_username_label"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/input_username_label"
-                    android:fontFamily="@font/quicksand_semibold"
-                    android:textColor="@color/component_input_label"
-                    android:layout_marginHorizontal="@dimen/screen_padding"/>
-                <LinearLayout
-                    android:id="@+id/contain_username_field"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/component_input_bg"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:elevation="5dp"
-                    android:layout_marginHorizontal="@dimen/screen_padding">
-                    <ImageView
-                        android:id="@+id/img_username_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/component_input_icon_bg"
-                        android:padding="@dimen/input_field_icon_padding"
-                        android:src="@drawable/profile"/>
-                    <EditText
-                        android:id="@+id/tv_username"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/component_input_background"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:hint="@string/input_username_hint"
-                        android:inputType="textEmailAddress"
-                        android:padding="@dimen/input_field_text_padding"
-                        android:textColor="@color/component_input_foreground"
-                        android:textColorHint="@color/component_input_placeholder"
-                        android:textSize="@dimen/input_field_text_size" />
-                </LinearLayout>
-                <TextView
-                    android:id="@+id/tv_username_validation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:text="@string/form_dummy_validation_message"
-                    android:textColor="@color/component_input_validation"
-                    android:layout_marginHorizontal="@dimen/screen_padding"/>
-            </LinearLayout>
+                app:layout_constraintTop_toTopOf="parent">
 
-<!-- Password Group -->
-            <LinearLayout
-                android:id="@+id/contain_password_group"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:showDividers="middle"
-                android:divider="@drawable/divider_input_group">
-                <TextView
-                    android:id="@+id/tv_password_label"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/input_password_label"
-                    android:fontFamily="@font/quicksand_semibold"
-                    android:textColor="@color/component_input_label"
-                    android:layout_marginHorizontal="@dimen/screen_padding"/>
+                <!-- Username Group-->
                 <LinearLayout
-                    android:id="@+id/contain_password_field"
+                    android:id="@+id/contain_username_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/component_input_bg"
-                    android:gravity="center_vertical"
-                    android:layout_marginHorizontal="@dimen/screen_padding"
-                    android:elevation="@dimen/input_field_elevation">
-                    <ImageView
-                        android:id="@+id/img_password_icon"
-                        android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/divider_input_group"
+                    android:layout_marginBottom="@dimen/login_form_gap">
+
+                    <!-- Username Label -->
+                    <TextView
+                        android:id="@+id/tv_username_label"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/component_input_icon_bg"
-                        android:padding="@dimen/input_field_icon_padding"
-                        android:src="@drawable/key" />
-                    <EditText
-                        android:id="@+id/tv_password"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/component_input_background"
-                        android:fontFamily="@font/quicksand_medium"
+                        android:layout_marginHorizontal="@dimen/screen_padding"
+                        android:fontFamily="@font/quicksand_semibold"
+                        android:text="@string/input_username_label"
+                        android:textColor="@color/component_input_label" />
+
+                    <!-- Username input field group -->
+                    <LinearLayout
+                        android:id="@+id/contain_username_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/screen_padding"
+                        android:background="@drawable/component_input_bg"
+                        android:elevation="5dp"
                         android:gravity="center_vertical"
-                        android:hint="@string/input_password_hint"
-                        android:inputType="textPassword"
-                        android:padding="@dimen/input_field_text_padding"
-                        android:textColor="@color/component_input_foreground"
-                        android:textColorHint="@color/component_input_placeholder"
-                        android:textSize="@dimen/input_field_text_size" />
-                    <ImageView
-                        android:id="@+id/btn_toggle_show_password"
-                        android:layout_width="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Username input field icon -->
+                        <ImageView
+                            android:id="@+id/img_username_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/component_input_icon_bg"
+                            android:padding="@dimen/input_field_icon_padding"
+                            android:src="@drawable/profile" />
+
+                        <!-- Username input field text input -->
+                        <EditText
+                            android:id="@+id/tv_username"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/component_input_background"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:hint="@string/input_username_hint"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/input_field_text_padding"
+                            android:textColor="@color/component_input_foreground"
+                            android:textColorHint="@color/component_input_placeholder"
+                            android:textSize="@dimen/input_field_text_size" />
+                    </LinearLayout>
+
+                    <!-- Username validation message -->
+                    <TextView
+                        android:id="@+id/tv_username_validation"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/input_field_icon_padding"
-                        android:src="@drawable/eye" />
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="@string/form_dummy_validation_message"
+                        android:textColor="@color/component_input_validation"
+                        android:layout_marginHorizontal="@dimen/screen_padding"/>
                 </LinearLayout>
-                <TextView
-                    android:id="@+id/tv_password_validation"
+
+                <!-- Password Group -->
+                <LinearLayout
+                    android:id="@+id/contain_password_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:text="@string/form_dummy_validation_message"
-                    android:textColor="@color/component_input_validation"
-                    android:layout_marginHorizontal="@dimen/screen_padding"/>
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/divider_input_group">
+
+                    <!-- Password label -->
+                    <TextView
+                        android:id="@+id/tv_password_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/input_password_label"
+                        android:fontFamily="@font/quicksand_semibold"
+                        android:textColor="@color/component_input_label"
+                        android:layout_marginHorizontal="@dimen/screen_padding"/>
+
+                    <!-- Password input field group  -->
+                    <LinearLayout
+                        android:id="@+id/contain_password_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/component_input_bg"
+                        android:gravity="center_vertical"
+                        android:layout_marginHorizontal="@dimen/screen_padding"
+                        android:elevation="@dimen/input_field_elevation">
+
+                        <!-- Password input field icon -->
+                        <ImageView
+                            android:id="@+id/img_password_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/component_input_icon_bg"
+                            android:padding="@dimen/input_field_icon_padding"
+                            android:src="@drawable/key" />
+
+                        <!-- Password input field text input -->
+                        <EditText
+                            android:id="@+id/tv_password"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/component_input_background"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:gravity="center_vertical"
+                            android:hint="@string/input_password_hint"
+                            android:inputType="textPassword"
+                            android:padding="@dimen/input_field_text_padding"
+                            android:textColor="@color/component_input_foreground"
+                            android:textColorHint="@color/component_input_placeholder"
+                            android:textSize="@dimen/input_field_text_size" />
+
+                        <!-- Password input field show password icon -->
+                        <ImageView
+                            android:id="@+id/btn_toggle_show_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/input_field_icon_padding"
+                            android:src="@drawable/eye" />
+                    </LinearLayout>
+
+                    <!-- Password input field validation message -->
+                    <TextView
+                        android:id="@+id/tv_password_validation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="@string/form_dummy_validation_message"
+                        android:textColor="@color/component_input_validation"
+                        android:layout_marginHorizontal="@dimen/screen_padding"/>
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-        <TextView
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/screen_padding"
-            android:layout_marginTop="@dimen/button_submit_top_margin"
-            android:background="@drawable/round_btn"
-            android:backgroundTint="@color/component_button_background"
-            android:fontFamily="@font/quicksand_bold"
-            android:gravity="center"
-            android:elevation="@dimen/button_elevation"
-            android:paddingVertical="@dimen/button_vertical_padding"
-            android:text="@string/button_login"
-            android:textColor="@color/component_button_foreground"
-            android:textSize="@dimen/button_submit_text_size"
-            app:layout_constraintTop_toBottomOf="@id/contain_form" />
 
-        <TextView
-            android:id="@+id/btn_recover_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/screen_padding"
-            android:layout_marginTop="@dimen/input_group_gap"
-            android:backgroundTint="@color/component_button_background"
-            android:fontFamily="@font/quicksand_bold"
-            android:gravity="center"
-            android:paddingHorizontal="@dimen/button_horizontal_padding"
-            android:paddingVertical="@dimen/button_vertical_padding"
-            android:text="@string/button_recover_password"
-            android:textColor="@color/component_input_label"
-            android:textSize="@dimen/button_medium_text_size"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_login" />
+            <!-- Login button -->
+            <TextView
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/screen_padding"
+                android:layout_marginTop="@dimen/button_submit_top_margin"
+                android:background="@drawable/round_btn"
+                android:backgroundTint="@color/component_button_background"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:elevation="@dimen/button_elevation"
+                android:paddingVertical="@dimen/button_vertical_padding"
+                android:text="@string/button_login"
+                android:textColor="@color/component_button_foreground"
+                android:textSize="@dimen/button_submit_text_size"
+                app:layout_constraintTop_toBottomOf="@id/contain_form" />
 
-        <TextView
-            android:id="@+id/btn_signup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/screen_padding"
-            android:background="@drawable/round_btn"
-            android:fontFamily="@font/quicksand_bold"
-            android:gravity="center"
-            android:paddingVertical="@dimen/button_vertical_padding"
-            android:paddingHorizontal="@dimen/button_horizontal_padding"
-            android:text="@string/button_new_account"
-            android:elevation="@dimen/button_elevation"
-            android:textColor="@color/component_button_foreground"
-            android:textSize="@dimen/button_medium_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:backgroundTint="@color/component_button_alternative_bg"
-            android:layout_marginBottom="@dimen/screen_padding"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Recover lost password button -->
+            <TextView
+                android:id="@+id/btn_recover_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/screen_padding"
+                android:layout_marginTop="@dimen/input_group_gap"
+                android:backgroundTint="@color/component_button_background"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/button_horizontal_padding"
+                android:paddingVertical="@dimen/button_vertical_padding"
+                android:text="@string/button_recover_password"
+                android:textColor="@color/component_input_label"
+                android:textSize="@dimen/button_medium_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_login" />
 
+            <!-- Sign up button -->
+            <TextView
+                android:id="@+id/btn_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/screen_padding"
+                android:layout_marginBottom="@dimen/screen_padding"
+                android:background="@drawable/round_btn"
+                android:backgroundTint="@color/component_button_alternative_bg"
+                android:elevation="@dimen/button_elevation"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/button_horizontal_padding"
+                android:paddingVertical="@dimen/button_vertical_padding"
+                android:text="@string/button_new_account"
+                android:textColor="@color/component_button_foreground"
+                android:textSize="@dimen/button_medium_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </FrameLayout>
